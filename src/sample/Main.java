@@ -25,6 +25,7 @@ public class Main extends Application {
     Button choice4 = new Button();
     Text response = new Text();
     ImageView lungHealthBar = new ImageView();
+    boolean currentChoiceWrong = false;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -53,10 +54,12 @@ public class Main extends Application {
             if(choiceList[currentChoice].getChoiceCorrect()[0]){
                 response.setText(choiceList[currentChoice].getCorrect());
                 currentChoice++;
+                currentChoiceWrong = false;
 
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[0]);
-                lungHealth++;
+                if(!currentChoiceWrong) {lungHealth++;}
+                currentChoiceWrong = true;
 
             }
             redraw();
@@ -65,9 +68,11 @@ public class Main extends Application {
             if(choiceList[currentChoice].getChoiceCorrect()[1]){
                 response.setText(choiceList[currentChoice].getCorrect());
                 currentChoice++;
+                currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[1]);
-                lungHealth++;
+                if(!currentChoiceWrong) {lungHealth++;}
+                currentChoiceWrong = true;
             }
             redraw();
         });
@@ -75,9 +80,11 @@ public class Main extends Application {
             if(choiceList[currentChoice].getChoiceCorrect()[2]){
                 response.setText(choiceList[currentChoice].getCorrect());
                 currentChoice++;
+                currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[1]);
-                lungHealth++;
+                if(!currentChoiceWrong) {lungHealth++;}
+                currentChoiceWrong = true;
             }
             redraw();
         });
@@ -85,13 +92,15 @@ public class Main extends Application {
             if(choiceList[currentChoice].getChoiceCorrect()[3]){
                 response.setText(choiceList[currentChoice].getCorrect());
                 currentChoice++;
+                currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[2]);
-                lungHealth++;
+                if(!currentChoiceWrong) {lungHealth++;}
+                currentChoiceWrong = true;
             }
             redraw();
         });
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Erase the Vape");
         primaryStage.setScene(new Scene(root, 500, 375));
         primaryStage.show();
     }
