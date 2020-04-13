@@ -1,18 +1,31 @@
 package sample;
 
 public class Choice {
-    private boolean isGood;
     private String text;
-    public Choice(String text, boolean isGood){
+    private String correct;
+    private String[] incorrect;
+    private String[] choices;
+    public Choice(String text, String correct, String[] incorrect, String[] choices) {
         this.text = text;
-        this.isGood = isGood;
-    }
-
-    public boolean isGood() {
-        return isGood;
+        this.correct = correct;
+        this.incorrect = incorrect;
+        this.choices = choices;
     }
 
     public String getText() {
         return text;
+    }
+
+    public String getCorrect() {
+        return correct;
+    }
+
+    public String[] getIncorrect() {
+        return incorrect;
+    }
+
+
+    public String[] getChoices() {
+        return choices;
     }
 }
