@@ -5,11 +5,13 @@ public class Choice {
     private String correct;
     private String[] incorrect;
     private String[] choices;
-    public Choice(String text, String correct, String[] incorrect, String[] choices) {
+    private boolean[] choiceCorrect;
+    public Choice(String text, String correct, String[] incorrect, String[] choices,boolean[] choiceCorrect) {
         this.text = text;
         this.correct = correct;
         this.incorrect = incorrect;
         this.choices = choices;
+        this.choiceCorrect = choiceCorrect;
     }
 
     public String getText() {
@@ -27,5 +29,9 @@ public class Choice {
 
     public String[] getChoices() {
         return choices;
+    }
+
+    public boolean[] getChoiceCorrect() {
+        return choiceCorrect;
     }
 }
