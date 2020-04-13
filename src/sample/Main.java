@@ -103,8 +103,6 @@ public class Main extends Application {
         choices[1] = "Ignore Him";
         choices[2] = "Leave";
         choices[3] = "Reply: “Just because your brother does it doesn’t make it cool.”";
-        choiceCorrect[0] = false;
-        choiceCorrect[1] = false;
         choiceCorrect[2] = false;
         choiceCorrect[3] = true;
         choiceList[1] = new Choice(text,correct,incorrect,choices,choiceCorrect);
@@ -119,13 +117,36 @@ public class Main extends Application {
         choices[2] = "Reply: “You need to stop it, what if you get in trouble?”";
         choices[3] = "Try to take the vape from him";
         choiceCorrect[0] = true;
-        choiceCorrect[1] = false;
-        choiceCorrect[2] = false;
         choiceCorrect[3] = false;
         choiceList[2] = new Choice(text,correct,incorrect,choices,choiceCorrect);
 
+        text = "A few days after you reported the incident your friend approaches you at the bus stop. He begins to yell that he got in serious trouble because of you. How do you reply?\n";
+        correct = "Correct. Your friend is feeling betrayed and probably extremely stressed out right now after losing his source of nicotine. Reassurance will help him understand that you have his health in mind";
+        incorrect[0] = "A confrontational attitude will make him less likely to listen to you iun the future.";
+        incorrect[1] = "A confrontational attitude will make him less likely to listen to you iun the future.";
+        incorrect[2] = "Taking the moral high ground is unlikely to make your friend see the situation any differently.";
+        choices[0] = "“Vaping was a dumb idea in the first place”";
+        choices[1] = "“You should have listened to me”";
+        choices[2] = "“I was just trying to help you, I was worried”";
+        choices[3] = "“I did what I thought was right”";
+        choiceCorrect[0] = false;
+        choiceCorrect[2] = true;
+        choiceList[3] = new Choice(text,correct,incorrect,choices,choiceCorrect);
 
-        
+        text = "A few weeks roll by and your friend comes up to you and apologizes about the way he acted and confides in you that he is still using the vape but wants to stop. How do you reply?";
+        correct = "Correct. Your friend is feeling betrayed and probably extremely stressed out right now after losing his source of nicotine. Reassurance will help him understand that you have his health in mind";
+        incorrect[0] = "This is the worst choice you can make here as it may leave your friend feeling abandoned which may ruin his chances of quitting vaping.";
+        incorrect[1] = "This is a valid way of stopping nicotine abuse, but he's unlikely to succeed without a support network.";
+        incorrect[2] = "This is a valid way of stopping nicotine abuse, but he's unlikely to succeed without a support network.";
+        choices[0] = "“It’s not my problem anymore?”";
+        choices[1] = "“You need to tell your parents.”";
+        choices[2] = "“Lean yourself off.”";
+        choices[3] = "“Stop cold turkey.”";
+        choiceCorrect[2] = false;
+        choiceCorrect[1] = true;
+        choiceList[4] = new Choice(text,correct,incorrect,choices,choiceCorrect);
+
+
     }
     public static void main(String[] args) {
         launch(args);
