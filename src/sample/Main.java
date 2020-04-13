@@ -23,7 +23,6 @@ public class Main extends Application {
         Button choice1 = new Button();
         Button choice2 = new Button();
         Button choice3 = new Button();
-
         root.getChildren().addAll(imageView,prompt,choice1,choice2,choice3);
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));

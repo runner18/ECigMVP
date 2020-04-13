@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Testing updates">
-      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar1.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar2.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar3.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar4.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar5.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lung healthbar6.2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +55,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -205,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586807311334</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Testing updates">
+      <created>1586807479696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586807479696</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added choice class">
+      <created>1586808201335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586808201335</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -234,33 +250,38 @@
     <MESSAGE value="Add images" />
     <MESSAGE value="Fix image filenames" />
     <MESSAGE value="Testing updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing updates" />
+    <MESSAGE value="Added choice class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added choice class" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="811" y="16" key="CommitChangelistDialog2" timestamp="1586807478750">
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1586808343353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="811" y="16" key="CommitChangelistDialog2/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807478750" />
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586808343353" />
+    <state x="811" y="16" key="CommitChangelistDialog2" timestamp="1586808200416">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="811" y="16" key="CommitChangelistDialog2/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586808200416" />
     <state x="548" y="168" key="FileChooserDialogImpl" timestamp="1586806125824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586806125824" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586807451528">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586807643604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807451528" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586807451527">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807643604" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586807643604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807451527" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586807451527">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807643604" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586807643603">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807451527" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586807451528">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807643603" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586807643604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807451528" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807643604" />
     <state x="577" y="124" key="RollbackChangesDialog" timestamp="1586807262043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -269,9 +290,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586806161173" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586807621874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.-95.1600.860@0.0.1536.824" timestamp="1586807621874" />
   </component>
 </project>
