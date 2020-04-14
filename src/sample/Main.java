@@ -31,14 +31,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
-        FileInputStream imgLoc = new FileInputStream("src/sample/lung healthbar1.png");
-        healthbarPics[0] = new Image(imgLoc,100,100,true,true);
-        imgLoc = new FileInputStream("src/sample/lung healthbar2.png");
-        healthbarPics[1] = new Image(imgLoc,100,100,true,true);
-        imgLoc = new FileInputStream("src/sample/lung healthbar3.png");
-        healthbarPics[2] = new Image(imgLoc,100,100,true,true);
-        imgLoc = new FileInputStream("src/sample/lung healthbar4.png");
-        healthbarPics[3] = new Image(imgLoc,100,100,true,true);
+        Class cls = this.getClass();
+        healthbarPics[0] = new Image(cls.getClassLoader().getResource("healthbar1.png").toString(),100,100,true,true);
+        healthbarPics[1] = new Image(cls.getClassLoader().getResource("healthbar1.png").toString(),100,100,true,true);
+        healthbarPics[2] = new Image(cls.getClassLoader().getResource("healthbar1.png").toString(),100,100,true,true);
+        healthbarPics[3] = new Image(cls.getClassLoader().getResource("healthbar1.png").toString(),100,100,true,true);
         lungHealthBar= new ImageView(healthbarPics[0]);
 
         prompt.wrappingWidthProperty().bind(root.widthProperty());
