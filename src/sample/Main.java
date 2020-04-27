@@ -34,9 +34,9 @@ public class Main extends Application {
         root.setAlignment(Pos.CENTER);
         Class cls = this.getClass();
         healthbarPics[0] = new Image("resources/healthbar1.png",100,100,true,true);
-        healthbarPics[1] = new Image("resources/healthbar2.png"),100,100,true,true);
-        healthbarPics[2] = new Image("resources/healthbar3.png"),100,100,true,true);
-        healthbarPics[3] = new Image("resources/healthbar4.png"),100,100,true,true);
+        healthbarPics[1] = new Image("resources/healthbar2.png",100,100,true,true);
+        healthbarPics[2] = new Image("resources/healthbar3.png",100,100,true,true);
+        healthbarPics[3] = new Image("resources/healthbar4.png",100,100,true,true);
         lungHealthBar= new ImageView(healthbarPics[0]);
 
         prompt.wrappingWidthProperty().bind(root.widthProperty());
