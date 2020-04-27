@@ -4,9 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -14,7 +12,6 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -32,10 +29,15 @@ public class Main extends Application {
     Label response = new Label();
     ImageView lungHealthBar = null;
     ImageView scenarioImage = null;
+    MenuItem citation = new MenuItem("View Citation");
+    MenuItem about = new MenuItem("About");
+    Menu options = new Menu("Options");
+    MenuBar topBar = new MenuBar();
+    String[] citations = new String[5];
     boolean currentChoiceWrong = false;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage){
         VBox root = new VBox();
         root.setAlignment(Pos.TOP_CENTER);
         root.setBackground(new Background(new BackgroundFill(Paint.valueOf("d0ffff"), new CornerRadii(0), new Insets(0))));
@@ -71,7 +73,24 @@ public class Main extends Application {
         scenarioImage = new ImageView((scenarioPics[0]));
         scenarioImage.setFitHeight(300);
 
-        root.getChildren().addAll(lungHealthBar,scenarioImage,prompt,choice1,choice2,choice3,choice4,response);
+        topBar.getMenus().add(options);
+        options.getItems().addAll(citation,about);
+        citation.setOnAction(click ->{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Citation");
+            alert.setHeaderText(null);
+            alert.setContentText(citations[currentChoice]);
+            alert.showAndWait();
+        });
+        about.setOnAction(click ->{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("About");
+            alert.setHeaderText(null);
+            alert.setContentText("By Max Gerckens, Noah Evans, and Alex Diehl, 2020");
+            alert.showAndWait();
+        });
+
+        root.getChildren().addAll(topBar,lungHealthBar,scenarioImage,prompt,choice1,choice2,choice3,choice4,response);
         writeScenarios();
         prompt.setText(choiceList[currentChoice].getText());
         choice1.setText(choiceList[currentChoice].getChoices()[0]);
@@ -130,6 +149,7 @@ public class Main extends Application {
         });
         primaryStage.setTitle("Erase the Vape");
         primaryStage.setScene(new Scene(root, 550, 800));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -199,7 +219,11 @@ public class Main extends Application {
         choiceCorrect = new boolean[]{false,true,false,false};
         choiceList[4] = new Choice(text,correct,incorrect,choices,choiceCorrect);
 
-
+        citations[0] = "About Electronic Cigarettes (E-Cigarettes). (2020, February 24). Retrieved from https://www.cdc.gov/tobacco/basic_information/e-cigarettes/about-e-cigarettes.html";
+        citations[1] = "Lippert, A.M., Corsi, D.J. & Venechuk, G.E. Schools Influence Adolescent E-Cigarette use, but when? Examining the Interdependent Association between School Context and Teen Vaping over time. J Youth Adolescence 48, 1899–1911 (2019). https://doi.org/10.1007/s10964-019-01106-y";
+        citations[2] = "National Institute on Drug Abuse. (2018, September 28). Recent Research Sheds New Light on Why Nicotine is So Addictive. Retrieved from https://www.drugabuse.gov/about-nida/noras-blog/2018/09/recent-research-sheds-new-light-why-nicotine-so-addictive";
+        citations[3] = "T. W. Wang et al., “Tobacco Product Use and Associated Factors Among Middle and High School Students,” Centers for Disease Control and Prevention, 05-Dec-2019. [Online]. Available: http://dx.doi.org/10.15585/mmwr.ss6812a1. [Accessed: 27-Apr-2020].";
+        citations[4] = "“Smoking relapse rates drop off sharply after two years,” EurekAlert!, 27-Feb-2002. [Online]. Available: https://www.eurekalert.org/pub_releases/2002-02/cfta-srr022702.php. [Accessed: 27-Apr-2020].";
     }
     public static void main(String[] args) {
         launch(args);
