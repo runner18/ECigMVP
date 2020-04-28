@@ -11,6 +11,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
@@ -97,14 +98,22 @@ public class Main extends Application {
         choice2.setText(choiceList[currentChoice].getChoices()[1]);
         choice3.setText(choiceList[currentChoice].getChoices()[2]);
         choice4.setText(choiceList[currentChoice].getChoices()[3]);
+        
         choice1.setOnAction(click -> {
             if(choiceList[currentChoice].getChoiceCorrect()[0]){
                 response.setText(choiceList[currentChoice].getCorrect());
+                response.setTextFill(Color.DARKGREEN);
+                choice1.setStyle(null);
+                choice2.setStyle(null);
+                choice3.setStyle(null);
+                choice4.setStyle(null);
                 currentChoice++;
                 currentChoiceWrong = false;
 
             }else{
+                choice1.setStyle("-fx-background-color: #FD4444");
                 response.setText(choiceList[currentChoice].getIncorrect()[0]);
+                response.setTextFill(Color.DARKRED);
                 if(!currentChoiceWrong) {lungHealth++;}
                 currentChoiceWrong = true;
 
@@ -114,10 +123,17 @@ public class Main extends Application {
         choice2.setOnAction(click -> {
             if(choiceList[currentChoice].getChoiceCorrect()[1]){
                 response.setText(choiceList[currentChoice].getCorrect());
+                response.setTextFill(Color.DARKGREEN);
+                choice1.setStyle(null);
+                choice2.setStyle(null);
+                choice3.setStyle(null);
+                choice4.setStyle(null);
                 currentChoice++;
                 currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[1]);
+                choice2.setStyle("-fx-background-color: #FD4444");
+                response.setTextFill(Color.DARKRED);
                 if(!currentChoiceWrong) {lungHealth++;}
                 currentChoiceWrong = true;
             }
@@ -126,10 +142,17 @@ public class Main extends Application {
         choice3.setOnAction(click -> {
             if(choiceList[currentChoice].getChoiceCorrect()[2]){
                 response.setText(choiceList[currentChoice].getCorrect());
+                response.setTextFill(Color.DARKGREEN);
+                choice1.setStyle(null);
+                choice2.setStyle(null);
+                choice3.setStyle(null);
+                choice4.setStyle(null);
                 currentChoice++;
                 currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[1]);
+                response.setTextFill(Color.DARKRED);
+                choice3.setStyle("-fx-background-color: #FD4444");
                 if(!currentChoiceWrong) {lungHealth++;}
                 currentChoiceWrong = true;
             }
@@ -138,10 +161,17 @@ public class Main extends Application {
         choice4.setOnAction(click -> {
             if(choiceList[currentChoice].getChoiceCorrect()[3]){
                 response.setText(choiceList[currentChoice].getCorrect());
+                response.setTextFill(Color.DARKGREEN);
+                choice1.setStyle(null);
+                choice2.setStyle(null);
+                choice3.setStyle(null);
+                choice4.setStyle(null);
                 currentChoice++;
                 currentChoiceWrong = false;
             }else{
                 response.setText(choiceList[currentChoice].getIncorrect()[2]);
+                response.setTextFill(Color.DARKRED);
+                choice4.setStyle("-fx-background-color: #FD4444");
                 if(!currentChoiceWrong) {lungHealth++;}
                 currentChoiceWrong = true;
             }
